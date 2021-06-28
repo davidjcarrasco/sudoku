@@ -1,0 +1,941 @@
+#2 [internal] load .dockerignore
+#2 transferring context: 34B done
+#2 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 278B done
+#1 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/swift:5.3-focal
+#4 ...
+
+#3 [internal] load metadata for docker.io/library/swift:5.3-focal-slim
+#3 DONE 1.0s
+
+#4 [internal] load metadata for docker.io/library/swift:5.3-focal
+#4 DONE 1.0s
+
+#9 [build 1/9] FROM docker.io/library/swift:5.3-focal@sha256:3fff4e7b806d04...
+#9 DONE 0.0s
+
+#5 [stage-1 1/5] FROM docker.io/library/swift:5.3-focal-slim@sha256:1501e0e...
+#5 DONE 0.0s
+
+#12 [internal] load build context
+#12 transferring context: 7.88kB 0.0s done
+#12 DONE 0.0s
+
+#13 [build 4/9] COPY ./Package.* ./
+#13 CACHED
+
+#10 [build 2/9] RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERAC...
+#10 CACHED
+
+#11 [build 3/9] WORKDIR /build
+#11 CACHED
+
+#14 [build 5/9] RUN swift package resolve
+#14 CACHED
+
+#15 [build 6/9] COPY . .
+#15 DONE 0.0s
+
+#16 [build 7/9] RUN swift build --enable-test-discovery -c release
+#16 7.187 [1/849] Compiling COperatingSystem Exports.swift
+#16 7.489 [2/849] Compiling CURLParser urlparser.c
+#16 7.489 [3/849] Compiling CNIOWindows shim.c
+#16 7.489 [4/849] Compiling CNIOWindows WSAStartup.c
+#16 7.489 [5/849] Compiling CNIOSHA1 c_nio_sha1.c
+#16 7.490 [6/849] Compiling CNIOLinux shim.c
+#16 7.553 [7/849] Compiling CNIOLinux ifaddrs-android.c
+#16 9.672 [8/849] Compiling CNIOHTTPParser c_nio_http_parser.c
+#16 9.734 [9/849] Compiling CNIOExtrasZlib empty.c
+#16 9.788 [10/849] Compiling CNIODarwin shim.c
+#16 10.54 [11/849] Compiling CNIOBoringSSLShims shims.c
+#16 11.61 [12/849] Compiling RoutingKit Parameters.swift
+#16 13.13 [13/849] Compiling tls_record.cc
+#16 13.72 [14/849] Compiling tls_method.cc
+#16 13.81 [15/849] Compiling CoreMetrics Locks.swift
+#16 16.39 [16/850] Compiling tls13_server.cc
+#16 16.39 [17/850] Compiling tls13_enc.cc
+#16 16.42 [18/850] Compiling Logging Locks.swift
+#16 17.58 [19/851] Compiling Metrics Metrics.swift
+#16 17.58 [20/851] Compiling tls13_client.cc
+#16 18.94 [21/851] Compiling tls13_both.cc
+#16 19.64 [22/851] Compiling t1_enc.cc
+#16 21.01 [23/851] Compiling t1_lib.cc
+#16 22.03 [24/851] Compiling ssl_versions.cc
+#16 22.84 [25/851] Compiling ssl_x509.cc
+#16 23.38 [26/851] Compiling ssl_transcript.cc
+#16 24.26 [27/851] Compiling ssl_stat.cc
+#16 26.22 [28/851] Compiling ssl_privkey.cc
+#16 26.34 [29/851] Compiling ssl_session.cc
+#16 28.23 [30/851] Compiling ssl_file.cc
+#16 28.59 [31/851] Compiling ssl_key_share.cc
+#16 29.30 [32/851] Compiling ssl_lib.cc
+#16 31.18 [33/851] Compiling ssl_buffer.cc
+#16 31.40 [34/851] Compiling ssl_cipher.cc
+#16 31.58 [35/851] Compiling ssl_cert.cc
+#16 33.54 [36/851] Compiling ssl_aead_ctx.cc
+#16 33.57 [37/851] Compiling ssl_asn1.cc
+#16 33.58 [38/851] Compiling s3_pkt.cc
+#16 35.63 [39/851] Compiling s3_lib.cc
+#16 35.85 [40/851] Compiling s3_both.cc
+#16 36.96 [41/851] Compiling handshake_server.cc
+#16 38.19 [42/851] Compiling handshake.cc
+#16 38.88 [43/851] Compiling handshake_client.cc
+#16 39.59 [44/851] Compiling handoff.cc
+#16 40.01 [45/851] Compiling dtls_record.cc
+#16 40.60 [46/851] Compiling dtls_method.cc
+#16 41.35 [47/851] Compiling d1_srtp.cc
+#16 41.74 [48/851] Compiling d1_pkt.cc
+#16 42.47 [49/851] Compiling d1_lib.cc
+#16 43.10 [50/851] Compiling bio_ssl.cc
+#16 43.59 [51/851] Compiling v3_skey.c
+#16 43.98 [52/851] Compiling v3_utl.c
+#16 44.32 [53/851] Compiling d1_both.cc
+#16 44.75 [54/851] Compiling v3_prn.c
+#16 44.85 [55/851] Compiling v3_purp.c
+#16 45.05 [56/851] Compiling v3_pmaps.c
+#16 45.33 [57/851] Compiling v3_pcons.c
+#16 45.56 [58/851] Compiling v3_pcia.c
+#16 45.95 [59/851] Compiling v3_pci.c
+#16 45.96 [60/851] Compiling v3_ocsp.c
+#16 46.27 [61/851] Compiling v3_ncons.c
+#16 46.44 [62/851] Compiling v3_int.c
+#16 46.66 [63/851] Compiling v3_lib.c
+#16 46.95 [64/851] Compiling v3_info.c
+#16 47.16 [65/851] Compiling v3_ia5.c
+#16 47.55 [66/851] Compiling v3_genn.c
+#16 47.67 [67/851] Compiling v3_extku.c
+#16 47.83 [68/851] Compiling v3_enum.c
+#16 48.62 [69/851] Compiling v3_cpols.c
+#16 48.63 [70/851] Compiling v3_conf.c
+#16 48.70 [71/851] Compiling v3_crld.c
+#16 49.00 [72/851] Compiling v3_bitst.c
+#16 49.04 [73/851] Compiling v3_bcons.c
+#16 49.30 [74/851] Compiling v3_alt.c
+#16 49.38 [75/851] Compiling v3_akeya.c
+#16 49.46 [76/851] Compiling v3_akey.c
+#16 49.83 [77/851] Compiling pcy_node.c
+#16 49.86 [78/851] Compiling pcy_map.c
+#16 50.10 [79/851] Compiling pcy_tree.c
+#16 50.22 [80/851] Compiling pcy_lib.c
+#16 50.23 [81/851] Compiling pcy_data.c
+#16 50.54 [82/851] Compiling pcy_cache.c
+#16 50.56 [83/851] Compiling ConsoleKit ActivityBar.swift
+#16 50.56 [84/851] Compiling x_x509a.c
+#16 50.69 [85/851] Compiling x_x509.c
+#16 50.80 [86/851] Compiling x_val.c
+#16 50.82 [87/851] Compiling x_spki.c
+#16 50.82 [88/851] Compiling x_sig.c
+#16 50.96 [89/851] Compiling x_req.c
+#16 51.08 [90/851] Compiling x_pkey.c
+#16 51.11 [91/851] Compiling x_pubkey.c
+#16 51.25 [92/851] Compiling x_info.c
+#16 51.35 [93/851] Compiling x_name.c
+#16 51.36 [94/851] Compiling x_exten.c
+#16 51.52 [95/851] Compiling x_attrib.c
+#16 51.63 [96/851] Compiling x_algor.c
+#16 51.69 [97/851] Compiling x_crl.c
+#16 51.84 [98/851] Compiling x509spki.c
+#16 51.93 [99/851] Compiling x509rset.c
+#16 52.04 [100/851] Compiling x_all.c
+#16 52.16 [101/851] Compiling x509name.c
+#16 52.18 [102/851] Compiling x509cset.c
+#16 52.42 [103/851] Compiling x509_txt.c
+#16 52.48 [104/851] Compiling x509_vpm.c
+#16 52.54 [105/851] Compiling x509_v3.c
+#16 52.80 [106/851] Compiling x509_set.c
+#16 52.85 [107/851] Compiling x509_trs.c
+#16 52.91 [108/851] Compiling x509_req.c
+#16 53.04 [109/851] Compiling x509_r2x.c
+#16 53.23 [110/851] Compiling x509_obj.c
+#16 53.43 [111/851] Compiling x509_ext.c
+#16 53.45 [112/851] Compiling x509_vfy.c
+#16 53.47 [113/851] Compiling x509_def.c
+#16 53.66 [114/851] Compiling x509_lu.c
+#16 53.70 [115/851] Compiling x509_d2.c
+#16 53.88 [116/851] Compiling x509_att.c
+#16 53.92 [117/851] Compiling x509.c
+#16 53.97 [118/851] Compiling t_x509a.c
+#16 54.02 [119/851] Compiling x509_cmp.c
+#16 54.28 [120/851] Compiling t_crl.c
+#16 54.28 [121/851] Compiling t_req.c
+#16 54.37 [122/851] Compiling rsa_pss.c
+#16 54.40 [123/851] Compiling t_x509.c
+#16 54.47 [124/851] Compiling i2d_pr.c
+#16 54.69 [125/851] Compiling by_file.c
+#16 54.85 [126/851] Compiling algorithm.c
+#16 54.96 [127/851] Compiling by_dir.c
+#16 55.02 [128/851] Compiling a_verify.c
+#16 55.14 [129/851] Compiling asn1_gen.c
+#16 55.31 [130/851] Compiling a_sign.c
+#16 55.35 [131/851] Compiling a_digest.c
+#16 55.42 [132/851] Compiling a_strex.c
+#16 55.51 [133/851] Compiling thread_win.c
+#16 55.68 [134/851] Compiling thread_pthread.c
+#16 55.76 [135/851] Compiling voprf.c
+#16 55.80 [136/851] Compiling thread_none.c
+#16 55.82 [137/851] Compiling trust_token.c
+#16 55.86 [138/851] Compiling thread.c
+#16 55.98 [139/851] Compiling rsa_print.c
+#16 56.00 [140/851] Compiling siphash.c
+#16 56.12 [141/851] Compiling stack.c
+#16 56.13 [142/851] Compiling refcount_lock.c
+#16 56.22 [143/851] Compiling refcount_c11.c
+#16 56.23 [144/851] Compiling rc4.c
+#16 56.26 [145/851] Compiling rsa_asn1.c
+#16 56.30 [146/851] Compiling windows.c
+#16 56.33 [147/851] Compiling fuchsia.c
+#16 56.33 [148/851] Compiling rand_extra.c
+#16 56.35 [149/851] Compiling pmbtoken.c
+#16 56.40 [150/851] Compiling deterministic.c
+#16 56.43 [151/851] Compiling forkunsafe.c
+#16 56.46 [152/851] Compiling poly1305_arm_asm.S
+#16 56.53 [153/851] Compiling pool.c
+#16 56.53 [154/851] Compiling poly1305_arm.c
+#16 56.55 [155/851] Compiling poly1305.c
+#16 56.90 [156/851] Compiling p5_pbev2.c
+#16 57.01 [157/851] Compiling pkcs8.c
+#16 57.19 [158/851] Compiling pkcs7.c
+#16 57.33 [159/851] Compiling pkcs8_x509.c
+#16 57.39 [160/851] Compiling pkcs7_x509.c
+#16 57.47 [161/851] Compiling pem_xaux.c
+#16 57.60 [162/851] Compiling pem_x509.c
+#16 57.73 [163/851] Compiling poly1305_vec.c
+#16 57.73 [164/851] Compiling pem_pkey.c
+#16 57.89 [165/851] Compiling pem_pk8.c
+#16 57.92 [166/851] Compiling pem_oth.c
+#16 58.05 [167/851] Compiling obj_xref.c
+#16 58.10 [168/851] Compiling pem_info.c
+#16 58.33 [169/851] Compiling pem_lib.c
+#16 58.40 [170/851] Compiling mem.c
+#16 58.43 [171/851] Compiling pem_all.c
+#16 58.59 [172/851] Compiling obj.c
+#16 58.67 [173/851] Compiling lhash.c
+#16 58.68 [174/851] Compiling poly_rq_mul.S
+#16 58.74 [175/851] Compiling x86_64-mont5.mac.x86_64.S
+#16 58.84 [176/851] Compiling hkdf.c
+#16 58.85 [177/851] Compiling x86_64-mont5.linux.x86_64.S
+#16 58.89 [178/851] Compiling x86_64-mont.mac.x86_64.S
+#16 58.92 [179/851] Compiling x86_64-mont.linux.x86_64.S
+#16 58.94 [180/851] Compiling x86-mont.linux.x86.S
+#16 58.98 [181/851] Compiling vpaes-x86_64.mac.x86_64.S
+#16 59.02 [182/851] Compiling vpaes-x86_64.linux.x86_64.S
+#16 59.03 [183/851] Compiling vpaes-x86.linux.x86.S
+#16 59.05 [184/851] Compiling hpke.c
+#16 59.08 [185/851] Compiling vpaes-armv8.linux.aarch64.S
+#16 59.09 [186/851] Compiling vpaes-armv8.ios.aarch64.S
+#16 59.11 [187/851] Compiling vpaes-armv7.linux.arm.S
+#16 59.13 [188/851] Compiling vpaes-armv7.ios.arm.S
+#16 59.17 [189/851] Compiling sha512-x86_64.mac.x86_64.S
+#16 59.23 [190/851] Compiling sha512-armv8.linux.aarch64.S
+#16 59.24 [191/851] Compiling sha512-x86_64.linux.x86_64.S
+#16 59.29 [192/851] Compiling sha512-armv8.ios.aarch64.S
+#16 59.29 [193/851] Compiling kdf.c
+#16 59.30 [194/851] Compiling sha512-armv4.linux.arm.S
+#16 59.35 [195/851] Compiling sha512-586.linux.x86.S
+#16 59.35 [196/851] Compiling sha256-x86_64.mac.x86_64.S
+#16 59.35 [197/851] Compiling sha512-armv4.ios.arm.S
+#16 59.41 [198/851] Compiling sha256-armv8.linux.aarch64.S
+#16 59.41 [199/851] Compiling sha256-armv8.ios.aarch64.S
+#16 59.45 [200/851] Compiling sha256-x86_64.linux.x86_64.S
+#16 59.46 [201/851] Compiling sha256-armv4.linux.arm.S
+#16 59.46 [202/851] Compiling sha256-armv4.ios.arm.S
+#16 59.50 [203/851] Compiling sha256-586.linux.x86.S
+#16 59.51 [204/851] Compiling sha1-x86_64.mac.x86_64.S
+#16 59.56 [205/851] Compiling sha1-armv8.ios.aarch64.S
+#16 59.56 [206/851] Compiling sha1-armv8.linux.aarch64.S
+#16 59.58 [207/851] Compiling sha1-x86_64.linux.x86_64.S
+#16 59.61 [208/851] Compiling sha1-armv4-large.linux.arm.S
+#16 59.61 [209/851] Compiling sha1-armv4-large.ios.arm.S
+#16 59.63 [210/851] Compiling sha1-586.linux.x86.S
+#16 59.81 [211/851] Compiling sha1.c
+#16 59.82 [212/851] Compiling sha512.c
+#16 59.82 [213/851] Compiling sha256.c
+#16 59.88 [214/851] Compiling rsaz-avx2.mac.x86_64.S
+#16 59.88 [215/851] Compiling sha1-altivec.c
+#16 59.98 [216/851] Compiling rsaz-avx2.linux.x86_64.S
+#16 60.15 [217/851] Compiling self_check.c
+#16 60.37 [218/851] Compiling hrss.c
+#16 60.47 [219/851] Compiling rsa.c
+#16 60.48 [220/851] Compiling rsa_impl.c
+#16 60.53 [221/851] Compiling rdrand-x86_64.mac.x86_64.S
+#16 60.53 [222/851] Compiling blinding.c
+#16 60.55 [223/851] Compiling rdrand-x86_64.linux.x86_64.S
+#16 60.65 [224/851] Compiling padding.c
+#16 60.68 [225/851] Compiling fork_detect.c
+#16 60.70 [226/851] Compiling rand.c
+#16 60.74 [227/851] Compiling p256_beeu-x86_64-asm.mac.x86_64.S
+#16 60.77 [228/851] Compiling urandom.c
+#16 60.78 [229/851] Compiling p256_beeu-x86_64-asm.linux.x86_64.S
+#16 60.79 [230/851] Compiling p256-x86_64-asm.mac.x86_64.S
+#16 60.88 [231/851] Compiling ctrdrbg.c
+#16 60.88 [232/851] Compiling p256-x86_64-asm.linux.x86_64.S
+#16 60.94 [233/851] Compiling polyval.c
+#16 60.95 [234/851] Compiling ofb.c
+#16 61.06 [235/851] Compiling gcm_nohw.c
+#16 61.23 [236/851] Compiling cfb.c
+#16 61.23 [237/851] Compiling ctr.c
+#16 61.29 [238/851] Compiling md5-x86_64.mac.x86_64.S
+#16 61.33 [239/851] Compiling cbc.c
+#16 61.36 [240/851] Compiling md5-x86_64.linux.x86_64.S
+#16 61.39 [241/851] Compiling md5-586.linux.x86.S
+#16 61.40 [242/851] Compiling md5.c
+#16 61.44 [243/851] Compiling gcm.c
+#16 61.48 [244/851] Compiling is_fips.c
+#16 61.50 [245/851] Compiling ghashv8-armx64.linux.aarch64.S
+#16 61.54 [246/851] Compiling ghashv8-armx64.ios.aarch64.S
+#16 61.56 [247/851] Compiling ghashv8-armx32.linux.arm.S
+#16 61.59 [248/851] Compiling hmac.c
+#16 61.59 [249/851] Compiling ghashv8-armx32.ios.arm.S
+#16 61.61 [250/851] Compiling ghash-x86_64.mac.x86_64.S
+#16 61.64 [251/851] Compiling ghash-x86.linux.x86.S
+#16 61.66 [252/851] Compiling ghash-ssse3-x86_64.mac.x86_64.S
+#16 61.66 [253/851] Compiling ghash-x86_64.linux.x86_64.S
+#16 61.71 [254/851] Compiling ghash-neon-armv8.linux.aarch64.S
+#16 61.71 [255/851] Compiling ghash-ssse3-x86.linux.x86.S
+#16 61.72 [256/851] Compiling ghash-ssse3-x86_64.linux.x86_64.S
+#16 61.73 [257/851] Compiling md4.c
+#16 61.76 [258/851] Compiling ghash-neon-armv8.ios.aarch64.S
+#16 61.76 [259/851] Compiling ghash-armv4.linux.arm.S
+#16 61.78 [260/851] Compiling ghash-armv4.ios.arm.S
+#16 61.79 [261/851] Compiling fips_shared_support.c
+#16 61.93 [262/851] Compiling util.c
+#16 61.94 [263/851] Compiling ecdh.c
+#16 62.02 [264/851] Compiling wnaf.c
+#16 62.06 [265/851] Compiling ecdsa.c
+#16 62.21 [266/851] Compiling simple_mul.c
+#16 62.22 [267/851] Compiling simple.c
+#16 62.31 [268/851] Compiling scalar.c
+#16 62.53 [269/851] Compiling oct.c
+#16 62.74 [270/851] Compiling felem.c
+#16 63.04 [271/851] Compiling ec_montgomery.c
+#16 63.04 [272/851] Compiling p256-x86_64.c
+#16 63.36 [273/851] Compiling ec_key.c
+#16 63.64 [274/851] Compiling digests.c
+#16 63.67 [275/851] Compiling ec.c
+#16 63.89 [276/851] Compiling digest.c
+#16 63.95 [277/851] Compiling co-586.linux.x86.S
+#16 64.18 [278/851] Compiling e_des.c
+#16 64.35 [279/851] Compiling p256.c
+#16 64.45 [280/851] Compiling des.c
+#16 64.70 [281/851] Compiling aead.c
+#16 64.74 [282/851] Compiling cipher.c
+#16 64.76 [283/851] Compiling bsaes-armv7.linux.arm.S
+#16 64.78 [284/851] Compiling e_aes.c
+#16 64.79 [285/851] Compiling bsaes-armv7.ios.arm.S
+#16 64.96 [286/851] Compiling rsaz_exp.c
+#16 65.00 [287/851] Compiling sqrt.c
+#16 65.19 [288/851] Compiling shift.c
+#16 65.29 [289/851] Compiling random.c
+#16 65.39 [290/851] Compiling prime.c
+#16 65.47 [291/851] Compiling montgomery_inv.c
+#16 65.64 [292/851] Compiling jacobi.c
+#16 65.66 [293/851] Compiling mul.c
+#16 65.73 [294/851] Compiling montgomery.c
+#16 65.77 [295/851] Compiling generic.c
+#16 65.93 [296/851] Compiling gcd.c
+#16 65.96 [297/851] Compiling gcd_extra.c
+#16 66.10 [298/851] Compiling div_extra.c
+#16 66.28 [299/851] Compiling ctx.c
+#16 66.40 [300/851] Compiling div.c
+#16 66.51 [301/851] Compiling exponentiation.c
+#16 66.63 [302/851] Compiling cmp.c
+#16 66.64 [303/851] Compiling bytes.c
+#16 66.87 [304/851] Compiling add.c
+#16 66.90 [305/851] Compiling bn.c
+#16 66.93 [306/851] Compiling bn-586.linux.x86.S
+#16 66.94 [307/851] Compiling armv8-mont.linux.aarch64.S
+#16 66.99 [308/851] Compiling armv8-mont.ios.aarch64.S
+#16 67.01 [309/851] Compiling armv4-mont.linux.arm.S
+#16 67.04 [310/851] Compiling armv4-mont.ios.arm.S
+#16 67.06 [311/851] Compiling aesv8-armx64.linux.aarch64.S
+#16 67.07 [312/851] Compiling x86_64-gcc.c
+#16 67.09 [313/851] Compiling aesv8-armx64.ios.aarch64.S
+#16 67.11 [314/851] Compiling aesv8-armx32.linux.arm.S
+#16 67.12 [315/851] Compiling aesv8-armx32.ios.arm.S
+#16 67.14 [316/851] Compiling aesni-x86_64.mac.x86_64.S
+#16 67.17 [317/851] Compiling aesni-x86.linux.x86.S
+#16 67.19 [318/851] Compiling aesni-gcm-x86_64.mac.x86_64.S
+#16 67.19 [319/851] Compiling aesni-x86_64.linux.x86_64.S
+#16 67.24 [320/851] Compiling aesni-gcm-x86_64.linux.x86_64.S
+#16 67.35 [321/851] Compiling mode_wrappers.c
+#16 67.47 [322/851] Compiling key_wrap.c
+#16 67.49 [323/851] Compiling aes.c
+#16 67.64 [324/851] Compiling sign.c
+#16 67.66 [325/851] Compiling ex_data.c
+#16 68.01 [326/851] Compiling print.c
+#16 68.08 [327/851] Compiling scrypt.c
+#16 68.19 [328/851] Compiling pbkdf.c
+#16 68.35 [329/851] Compiling p_x25519.c
+#16 68.35 [330/851] Compiling p_x25519_asn1.c
+#16 68.53 [331/851] Compiling p_rsa_asn1.c
+#16 68.70 [332/851] Compiling p_rsa.c
+#16 68.76 [333/851] Compiling p_ed25519_asn1.c
+#16 68.85 [334/851] Compiling p_ed25519.c
+#16 68.87 [335/851] Compiling aes_nohw.c
+#16 68.96 [336/851] Compiling p_ec_asn1.c
+#16 69.08 [337/851] Compiling p_ec.c
+#16 69.09 [338/851] Compiling p_dsa_asn1.c
+#16 69.29 [339/851] Compiling evp_ctx.c
+#16 69.42 [340/851] Compiling evp_asn1.c
+#16 69.45 [341/851] Compiling evp.c
+#16 69.48 [342/851] Compiling digestsign.c
+#16 69.50 [343/851] Compiling err_data.c
+#16 69.63 [344/851] Compiling engine.c
+#16 69.74 [345/851] Compiling ecdsa_asn1.c
+#16 69.79 [346/851] Compiling ecdh_extra.c
+#16 69.92 [347/851] Compiling err.c
+#16 69.96 [348/851] Compiling ec_derive.c
+#16 70.10 [349/851] Compiling hash_to_curve.c
+#16 70.23 [350/851] Compiling dsa_asn1.c
+#16 70.30 [351/851] Compiling ec_asn1.c
+#16 70.45 [352/851] Compiling params.c
+#16 70.51 [353/851] Compiling digest_extra.c
+#16 70.60 [354/851] Compiling dh_asn1.c
+#16 70.64 [355/851] Compiling dsa.c
+#16 70.74 [356/851] Compiling check.c
+#16 70.81 [357/851] Compiling dh.c
+#16 70.87 [358/851] Compiling x25519-asm-arm.S
+#16 70.90 [359/851] Compiling spake25519.c
+#16 70.97 [360/851] Compiling cpu-ppc64le.c
+#16 71.03 [361/851] Compiling crypto.c
+#16 71.09 [362/851] Compiling cpu-arm.c
+#16 71.14 [363/851] Compiling cpu-intel.c
+#16 71.16 [364/851] Compiling cpu-arm-linux.c
+#16 71.20 [365/851] Compiling cpu-aarch64-linux.c
+#16 71.23 [366/851] Compiling cpu-aarch64-fuchsia.c
+#16 71.48 [367/851] Compiling cmac.c
+#16 71.75 [368/851] Compiling conf.c
+#16 71.85 [369/851] Compiling tls_cbc.c
+#16 71.94 [370/851] Compiling e_rc4.c
+#16 72.00 [371/851] Compiling p224-64.c
+#16 72.09 [372/851] Compiling e_tls.c
+#16 72.13 [373/851] Compiling e_null.c
+#16 72.26 [374/851] Compiling e_rc2.c
+#16 72.34 [375/851] Compiling e_chacha20poly1305.c
+#16 72.47 [376/851] Compiling e_aesctrhmac.c
+#16 72.56 [377/851] Compiling e_aesgcmsiv.c
+#16 72.61 [378/851] Compiling derive_key.c
+#16 72.67 [379/851] Compiling chacha20_poly1305_x86_64.mac.x86_64.S
+#16 72.72 [380/851] Compiling cipher_extra.c
+#16 72.75 [381/851] Compiling e_aesccm.c
+#16 72.78 [382/851] Compiling aes128gcmsiv-x86_64.mac.x86_64.S
+#16 72.84 [383/851] Compiling aes128gcmsiv-x86_64.linux.x86_64.S
+#16 72.86 [384/851] Compiling chacha20_poly1305_x86_64.linux.x86_64.S
+#16 72.90 [385/851] Compiling chacha-x86_64.mac.x86_64.S
+#16 72.93 [386/851] Compiling chacha-x86_64.linux.x86_64.S
+#16 72.95 [387/851] Compiling chacha.c
+#16 72.95 [388/851] Compiling chacha-x86.linux.x86.S
+#16 72.99 [389/851] Compiling chacha-armv8.linux.aarch64.S
+#16 73.01 [390/851] Compiling chacha-armv4.linux.arm.S
+#16 73.01 [391/851] Compiling chacha-armv8.ios.aarch64.S
+#16 73.04 [392/851] Compiling chacha-armv4.ios.arm.S
+#16 73.15 [393/851] Compiling unicode.c
+#16 73.19 [394/851] Compiling curve25519.c
+#16 73.32 [395/851] Compiling asn1_compat.c
+#16 73.34 [396/851] Compiling ber.c
+#16 73.53 [397/851] Compiling buf.c
+#16 73.55 [398/851] Compiling cbs.c
+#16 73.64 [399/851] Compiling bn_asn1.c
+#16 73.71 [400/851] Compiling cbb.c
+#16 73.71 [401/851] Compiling socket_helper.c
+#16 73.75 [402/851] Compiling convert.c
+#16 73.79 [403/851] Compiling socket.c
+#16 73.84 [404/851] Compiling printf.c
+#16 73.91 [405/851] Compiling hexdump.c
+#16 73.99 [406/851] Compiling pair.c
+#16 74.03 [407/851] Compiling file.c
+#16 74.06 [408/851] Compiling fd.c
+#16 74.24 [409/851] Compiling connect.c
+#16 74.24 [410/851] Compiling bio_mem.c
+#16 74.43 [411/851] Compiling base64.c
+#16 74.43 [412/851] Compiling time_support.c
+#16 74.49 [413/851] Compiling tasn_utl.c
+#16 74.57 [414/851] Compiling bio.c
+#16 74.70 [415/851] Compiling tasn_fre.c
+#16 74.70 [416/851] Compiling tasn_new.c
+#16 74.74 [417/851] Compiling tasn_typ.c
+#16 74.85 [418/851] Compiling f_string.c
+#16 74.88 [419/851] Compiling f_int.c
+#16 74.94 [420/851] Compiling tasn_enc.c
+#16 75.00 [421/851] Compiling f_enum.c
+#16 75.04 [422/851] Compiling asn_pack.c
+#16 75.09 [423/851] Compiling asn1_par.c
+#16 75.23 [424/851] Compiling a_utf8.c
+#16 75.28 [425/851] Compiling tasn_dec.c
+#16 75.31 [426/851] Compiling asn1_lib.c
+#16 75.33 [427/851] Compiling a_utctm.c
+#16 75.42 [428/851] Compiling a_type.c
+#16 75.47 [429/851] Compiling a_print.c
+#16 75.50 [430/851] Compiling a_time.c
+#16 75.56 [431/851] Compiling a_octet.c
+#16 75.57 [432/851] Compiling a_strnid.c
+#16 75.72 [433/851] Compiling a_i2d_fp.c
+#16 75.73 [434/851] Compiling a_object.c
+#16 75.73 [435/851] Compiling a_mbstr.c
+#16 75.88 [436/851] Compiling a_dup.c
+#16 75.90 [437/851] Compiling a_int.c
+#16 75.96 [438/851] Compiling a_enum.c
+#16 75.99 [439/851] Compiling a_gentm.c
+#16 76.04 [440/851] Compiling a_d2i_fp.c
+#16 76.05 [441/851] Compiling a_bool.c
+#16 76.20 [442/851] Compiling CMultipartParser multipartparser.c
+#16 76.21 [443/851] Compiling a_bitstr.c
+#16 76.86 [444/851] Compiling CCryptoBoringSSLShims shims.c
+#16 77.17 [445/851] Compiling v3_skey.c
+#16 77.22 [446/851] Compiling v3_utl.c
+#16 77.59 [447/851] Compiling v3_prn.c
+#16 77.88 [448/851] Compiling v3_purp.c
+#16 77.95 [449/851] Compiling v3_pmaps.c
+#16 78.24 [450/851] Compiling v3_pcons.c
+#16 78.27 [451/851] Compiling v3_pcia.c
+#16 78.57 [452/851] Compiling v3_ocsp.c
+#16 78.67 [453/851] Compiling v3_pci.c
+#16 79.01 [454/851] Compiling v3_ncons.c
+#16 79.09 [455/851] Compiling v3_lib.c
+#16 79.31 [456/851] Compiling v3_int.c
+#16 79.51 [457/851] Compiling v3_info.c
+#16 79.64 [458/851] Compiling v3_ia5.c
+#16 79.90 [459/851] Compiling v3_genn.c
+#16 79.97 [460/851] Compiling v3_extku.c
+#16 80.23 [461/851] Compiling v3_enum.c
+#16 80.52 [462/851] Compiling v3_crld.c
+#16 80.85 [463/851] Compiling v3_cpols.c
+#16 81.02 [464/851] Compiling v3_conf.c
+#16 81.17 [465/851] Compiling v3_bitst.c
+#16 81.35 [466/851] Compiling v3_bcons.c
+#16 81.41 [467/851] Compiling c-nioatomics.c
+#16 81.66 [468/851] Compiling v3_akeya.c
+#16 81.71 [469/851] Compiling v3_alt.c
+#16 81.78 [470/851] Compiling v3_akey.c
+#16 82.07 [471/851] Compiling pcy_node.c
+#16 82.11 [472/851] Compiling pcy_map.c
+#16 82.33 [473/851] Compiling pcy_tree.c
+#16 82.41 [474/851] Compiling pcy_lib.c
+#16 82.42 [475/851] Compiling pcy_data.c
+#16 82.69 [476/851] Compiling c-atomics.c
+#16 82.74 [477/852] Compiling pcy_cache.c
+#16 82.74 [478/852] Compiling x_x509a.c
+#16 82.85 [479/852] Compiling x_x509.c
+#16 82.96 [480/852] Compiling x_val.c
+#16 83.00 [481/852] Compiling x_spki.c
+#16 83.13 [482/852] Compiling x_sig.c
+#16 83.24 [483/852] Compiling x_req.c
+#16 83.35 [484/852] Compiling x_pubkey.c
+#16 83.46 [485/852] Compiling x_pkey.c
+#16 83.63 [486/852] Compiling x_info.c
+#16 83.73 [487/852] Compiling x_exten.c
+#16 83.80 [488/852] Compiling x_name.c
+#16 84.02 [489/852] Compiling x_attrib.c
+#16 84.25 [490/852] Compiling x_crl.c
+#16 84.33 [491/852] Compiling x_algor.c
+#16 84.49 [492/852] Compiling x_all.c
+#16 84.52 [493/852] Compiling x509spki.c
+#16 84.57 [494/852] Compiling x509rset.c
+#16 84.83 [495/852] Compiling x509cset.c
+#16 84.90 [496/852] Compiling x509name.c
+#16 85.16 [497/852] Compiling x509_vpm.c
+#16 85.33 [498/852] Compiling x509_v3.c
+#16 85.41 [499/852] Compiling x509_txt.c
+#16 85.72 [500/852] Compiling x509_set.c
+#16 85.76 [501/852] Compiling x509_trs.c
+#16 86.01 [502/852] Compiling x509_r2x.c
+#16 86.11 [503/852] Compiling x509_req.c
+#16 86.25 [504/852] Compiling x509_vfy.c
+#16 86.36 [505/852] Compiling x509_obj.c
+#16 86.60 [506/852] Compiling x509_def.c
+#16 86.60 [507/852] Compiling x509_ext.c
+#16 86.79 [508/852] Compiling x509_lu.c
+#16 86.84 [509/852] Compiling x509_d2.c
+#16 87.10 [510/852] Compiling x509.c
+#16 87.16 [511/852] Compiling x509_cmp.c
+#16 87.21 [512/852] Compiling x509_att.c
+#16 87.37 [513/852] Compiling t_x509a.c
+#16 87.59 [514/852] Compiling t_req.c
+#16 87.68 [515/852] Compiling t_x509.c
+#16 87.70 [516/852] Compiling t_crl.c
+#16 87.85 [517/852] Compiling i2d_pr.c
+#16 87.95 [518/852] Compiling rsa_pss.c
+#16 88.03 [519/852] Compiling by_file.c
+#16 88.27 [520/852] Compiling algorithm.c
+#16 88.28 [521/852] Compiling by_dir.c
+#16 88.50 [522/852] Compiling asn1_gen.c
+#16 88.53 [523/852] Compiling a_verify.c
+#16 88.74 [524/852] Compiling a_strex.c
+#16 88.77 [525/852] Compiling a_digest.c
+#16 88.78 [526/852] Compiling a_sign.c
+#16 88.87 [527/852] Compiling thread_win.c
+#16 89.07 [528/852] Compiling thread_pthread.c
+#16 89.18 [529/852] Compiling thread_none.c
+#16 89.24 [530/852] Compiling trust_token.c
+#16 89.29 [531/852] Compiling thread.c
+#16 89.46 [532/852] Compiling siphash.c
+#16 89.55 [533/852] Compiling stack.c
+#16 89.58 [534/852] Compiling rsa_print.c
+#16 89.71 [535/852] Compiling refcount_lock.c
+#16 89.81 [536/852] Compiling pmbtoken.c
+#16 89.82 [537/852] Compiling refcount_c11.c
+#16 89.86 [538/852] Compiling rsa_asn1.c
+#16 89.88 [539/852] Compiling windows.c
+#16 89.92 [540/852] Compiling rc4.c
+#16 89.95 [541/852] Compiling fuchsia.c
+#16 89.96 [542/852] Compiling rand_extra.c
+#16 90.02 [543/852] Compiling deterministic.c
+#16 90.04 [544/852] Compiling forkunsafe.c
+#16 90.10 [545/852] Compiling poly1305_arm_asm.S
+#16 90.19 [546/852] Compiling pool.c
+#16 90.22 [547/852] Compiling poly1305_arm.c
+#16 90.30 [548/852] Compiling poly1305.c
+#16 90.70 [549/852] Compiling poly1305_vec.c
+#16 90.97 [550/852] Compiling pkcs8.c
+#16 91.20 [551/852] Compiling p5_pbev2.c
+#16 91.27 [552/852] Compiling pkcs8_x509.c
+#16 91.44 [553/852] Compiling pkcs7.c
+#16 91.58 [554/852] Compiling pkcs7_x509.c
+#16 91.65 [555/852] Compiling pem_xaux.c
+#16 91.87 [556/852] Compiling pem_x509.c
+#16 92.12 [557/852] Compiling pem_pk8.c
+#16 92.13 [558/852] Compiling pem_pkey.c
+#16 92.21 [559/852] Compiling pem_oth.c
+#16 92.58 [560/852] Compiling pem_info.c
+#16 92.77 [561/852] Compiling obj_xref.c
+#16 92.81 [562/852] Compiling pem_lib.c
+#16 92.92 [563/852] Compiling pem_all.c
+#16 93.18 [564/852] Compiling mem.c
+#16 93.27 [565/852] Compiling lhash.c
+#16 93.40 [566/852] Compiling NIOConcurrencyHelpers NIOAtomic.swift
+#16 93.40 [567/852] Compiling obj.c
+#16 93.55 [568/853] Compiling poly_rq_mul.S
+#16 93.55 [569/853] Compiling hkdf.c
+#16 93.60 [570/853] Compiling x86_64-mont5.mac.x86_64.S
+#16 93.69 [571/853] Compiling x86_64-mont5.linux.x86_64.S
+#16 93.75 [572/853] Compiling x86_64-mont.mac.x86_64.S
+#16 93.78 [573/853] Compiling hpke.c
+#16 93.83 [574/853] Compiling x86_64-mont.linux.x86_64.S
+#16 93.84 [575/853] Compiling x86-mont.linux.x86.S
+#16 93.88 [576/853] Compiling vpaes-x86_64.mac.x86_64.S
+#16 93.91 [577/853] Compiling vpaes-x86_64.linux.x86_64.S
+#16 93.94 [578/853] Compiling vpaes-x86.linux.x86.S
+#16 93.97 [579/853] Compiling vpaes-armv8.linux.aarch64.S
+#16 93.99 [580/853] Compiling vpaes-armv8.ios.aarch64.S
+#16 94.02 [581/853] Compiling vpaes-armv7.linux.arm.S
+#16 94.04 [582/853] Compiling vpaes-armv7.ios.arm.S
+#16 94.09 [583/853] Compiling sha512-x86_64.mac.x86_64.S
+#16 94.18 [584/853] Compiling sha512-x86_64.linux.x86_64.S
+#16 94.18 [585/853] Compiling kdf.c
+#16 94.25 [586/853] Compiling sha512-armv8.ios.aarch64.S
+#16 94.25 [587/853] Compiling sha512-armv8.linux.aarch64.S
+#16 94.30 [588/853] Compiling sha512-armv4.ios.arm.S
+#16 94.30 [589/853] Compiling sha512-armv4.linux.arm.S
+#16 94.36 [590/853] Compiling sha256-x86_64.mac.x86_64.S
+#16 94.36 [591/853] Compiling sha512-586.linux.x86.S
+#16 94.42 [592/853] Compiling sha256-armv8.linux.aarch64.S
+#16 94.47 [593/853] Compiling sha256-x86_64.linux.x86_64.S
+#16 94.47 [594/853] Compiling sha256-armv8.ios.aarch64.S
+#16 94.52 [595/853] Compiling sha256-armv4.linux.arm.S
+#16 94.53 [596/853] Compiling sha256-armv4.ios.arm.S
+#16 94.58 [597/853] Compiling sha256-586.linux.x86.S
+#16 94.59 [598/853] Compiling sha1-x86_64.mac.x86_64.S
+#16 94.64 [599/853] Compiling sha1-armv8.linux.aarch64.S
+#16 94.70 [600/853] Compiling sha1-armv8.ios.aarch64.S
+#16 94.72 [601/853] Compiling sha1-x86_64.linux.x86_64.S
+#16 94.76 [602/853] Compiling sha1-armv4-large.linux.arm.S
+#16 94.78 [603/853] Compiling sha1-armv4-large.ios.arm.S
+#16 94.82 [604/853] Compiling sha1-586.linux.x86.S
+#16 95.00 [605/853] Compiling sha512.c
+#16 95.04 [606/853] Compiling sha256.c
+#16 95.10 [607/853] Compiling hrss.c
+#16 95.12 [608/853] Compiling sha1-altivec.c
+#16 95.18 [609/853] Compiling rsaz-avx2.mac.x86_64.S
+#16 95.19 [610/853] Compiling sha1.c
+#16 95.26 [611/853] Compiling rsaz-avx2.linux.x86_64.S
+#16 95.44 [612/853] Compiling self_check.c
+#16 95.78 [613/853] Compiling rsa.c
+#16 95.82 [614/853] Compiling rsa_impl.c
+#16 95.87 [615/853] Compiling rdrand-x86_64.mac.x86_64.S
+#16 95.94 [616/853] Compiling rdrand-x86_64.linux.x86_64.S
+#16 95.95 [617/853] Compiling blinding.c
+#16 95.97 [618/853] Compiling padding.c
+#16 96.10 [619/853] Compiling fork_detect.c
+#16 96.11 [620/853] Compiling rand.c
+#16 96.15 [621/853] Compiling p256_beeu-x86_64-asm.mac.x86_64.S
+#16 96.15 [622/853] Compiling urandom.c
+#16 96.20 [623/853] Compiling p256-x86_64-asm.mac.x86_64.S
+#16 96.22 [624/853] Compiling p256_beeu-x86_64-asm.linux.x86_64.S
+#16 96.31 [625/853] Compiling p256-x86_64-asm.linux.x86_64.S
+#16 96.33 [626/853] Compiling ctrdrbg.c
+#16 96.39 [627/853] Compiling polyval.c
+#16 96.48 [628/853] Compiling ofb.c
+#16 96.51 [629/853] Compiling gcm_nohw.c
+#16 96.76 [630/853] Compiling ctr.c
+#16 96.81 [631/853] Compiling cfb.c
+#16 96.97 [632/853] Compiling md5.c
+#16 96.98 [633/853] Compiling gcm.c
+#16 97.01 [634/853] Compiling cbc.c
+#16 97.03 [635/853] Compiling md5-x86_64.mac.x86_64.S
+#16 97.04 [636/853] Compiling md5-x86_64.linux.x86_64.S
+#16 97.06 [637/853] Compiling md5-586.linux.x86.S
+#16 97.13 [638/853] Compiling is_fips.c
+#16 97.18 [639/853] Compiling ghashv8-armx64.linux.aarch64.S
+#16 97.23 [640/853] Compiling ghashv8-armx64.ios.aarch64.S
+#16 97.26 [641/853] Compiling hmac.c
+#16 97.28 [642/853] Compiling ghashv8-armx32.linux.arm.S
+#16 97.30 [643/853] Compiling ghashv8-armx32.ios.arm.S
+#16 97.32 [644/853] Compiling ghash-x86_64.mac.x86_64.S
+#16 97.37 [645/853] Compiling ghash-x86.linux.x86.S
+#16 97.38 [646/853] Compiling ghash-x86_64.linux.x86_64.S
+#16 97.40 [647/853] Compiling md4.c
+#16 97.43 [648/853] Compiling ghash-ssse3-x86_64.mac.x86_64.S
+#16 97.45 [649/853] Compiling ghash-ssse3-x86_64.linux.x86_64.S
+#16 97.45 [650/853] Compiling ghash-ssse3-x86.linux.x86.S
+#16 97.49 [651/853] Compiling ghash-neon-armv8.linux.aarch64.S
+#16 97.50 [652/853] Compiling ghash-neon-armv8.ios.aarch64.S
+#16 97.50 [653/853] Compiling ghash-armv4.linux.arm.S
+#16 97.54 [654/853] Compiling ghash-armv4.ios.arm.S
+#16 97.55 [655/853] Compiling fips_shared_support.c
+#16 97.69 [656/853] Compiling ecdh.c
+#16 97.78 [657/853] Compiling wnaf.c
+#16 97.78 [658/853] Compiling ecdsa.c
+#16 97.83 [659/853] Compiling util.c
+#16 98.06 [660/853] Compiling simple.c
+#16 98.07 [661/853] Compiling simple_mul.c
+#16 98.14 [662/853] Compiling scalar.c
+#16 98.95 [663/853] Compiling p256-x86_64.c
+#16 99.17 [664/853] Compiling oct.c
+#16 99.40 [665/853] Compiling felem.c
+#16 99.73 [666/853] Compiling ec_montgomery.c
+#16 100.0 [667/853] Compiling ec_key.c
+#16 100.4 [668/853] Compiling p256.c
+#16 100.6 [669/853] Compiling ec.c
+#16 100.7 [670/853] Compiling digests.c
+#16 100.9 [671/853] Compiling digest.c
+#16 100.9 [672/853] Compiling co-586.linux.x86.S
+#16 101.2 [673/853] Compiling e_des.c
+#16 101.4 [674/853] Compiling des.c
+#16 101.8 [675/853] Compiling e_aes.c
+#16 101.8 [676/853] Compiling cipher.c
+#16 101.9 [677/853] Compiling bsaes-armv7.linux.arm.S
+#16 101.9 [678/853] Compiling bsaes-armv7.ios.arm.S
+#16 102.1 [679/853] Compiling aead.c
+#16 102.2 [680/853] Compiling sqrt.c
+#16 102.5 [681/853] Compiling rsaz_exp.c
+#16 102.5 [682/853] Compiling shift.c
+#16 102.8 [683/853] Compiling random.c
+#16 102.9 [684/853] Compiling prime.c
+#16 103.1 [685/853] Compiling montgomery_inv.c
+#16 103.3 [686/853] Compiling mul.c
+#16 103.4 [687/853] Compiling jacobi.c
+#16 103.4 [688/853] Compiling montgomery.c
+#16 103.5 [689/853] Compiling generic.c
+#16 103.7 [690/853] Compiling gcd.c
+#16 103.7 [691/853] Compiling gcd_extra.c
+#16 103.8 [692/853] Compiling div_extra.c
+#16 104.3 [693/853] Compiling div.c
+#16 104.4 [694/853] Compiling exponentiation.c
+#16 104.4 [695/853] Compiling ctx.c
+#16 104.7 [696/853] Compiling bytes.c
+#16 104.7 [697/853] Compiling cmp.c
+#16 105.0 [698/853] Compiling bn.c
+#16 105.1 [699/853] Compiling x86_64-gcc.c
+#16 105.2 [700/853] Compiling bn-586.linux.x86.S
+#16 105.2 [701/853] Compiling armv8-mont.linux.aarch64.S
+#16 105.3 [702/853] Compiling add.c
+#16 105.3 [703/853] Compiling armv8-mont.ios.aarch64.S
+#16 105.3 [704/853] Compiling armv4-mont.linux.arm.S
+#16 105.3 [705/853] Compiling armv4-mont.ios.arm.S
+#16 105.4 [706/853] Compiling aesv8-armx64.linux.aarch64.S
+#16 105.4 [707/853] Compiling aesv8-armx64.ios.aarch64.S
+#16 105.4 [708/853] Compiling aesv8-armx32.linux.arm.S
+#16 105.4 [709/853] Compiling aesv8-armx32.ios.arm.S
+#16 105.5 [710/853] Compiling aesni-x86_64.mac.x86_64.S
+#16 105.5 [711/853] Compiling aesni-x86.linux.x86.S
+#16 105.5 [712/853] Compiling aesni-x86_64.linux.x86_64.S
+#16 105.6 [713/853] Compiling aesni-gcm-x86_64.mac.x86_64.S
+#16 105.6 [714/853] Compiling aesni-gcm-x86_64.linux.x86_64.S
+#16 105.7 [715/853] Compiling mode_wrappers.c
+#16 105.9 [716/853] Compiling key_wrap.c
+#16 106.0 [717/853] Compiling aes.c
+#16 106.2 [718/853] Compiling ex_data.c
+#16 106.4 [719/853] Compiling sign.c
+#16 106.8 [720/853] Compiling scrypt.c
+#16 107.1 [721/853] Compiling print.c
+#16 107.3 [722/853] Compiling aes_nohw.c
+#16 107.3 [723/853] Compiling pbkdf.c
+#16 107.5 [724/853] Compiling p_x25519.c
+#16 107.5 [725/853] Compiling p_x25519_asn1.c
+#16 107.6 [726/853] Compiling p_rsa_asn1.c
+#16 107.9 [727/853] Compiling p_rsa.c
+#16 107.9 [728/853] Compiling p_ed25519_asn1.c
+#16 107.9 [729/853] Compiling p224-64.c
+#16 108.0 [730/853] Compiling p_ed25519.c
+#16 108.1 [731/853] Compiling p_ec_asn1.c
+#16 108.2 [732/853] Compiling p_ec.c
+#16 108.2 [733/853] Compiling p_dsa_asn1.c
+#16 108.4 [734/853] Compiling evp_ctx.c
+#16 108.5 [735/853] Compiling evp_asn1.c
+#16 108.6 [736/853] Compiling evp.c
+#16 108.6 [737/853] Compiling err_data.c
+#16 108.6 [738/853] Compiling digestsign.c
+#16 108.7 [739/853] Compiling engine.c
+#16 108.8 [740/853] Compiling ecdsa_asn1.c
+#16 108.9 [741/853] Compiling ecdh_extra.c
+#16 109.0 [742/853] Compiling err.c
+#16 109.0 [743/853] Compiling ec_derive.c
+#16 109.2 [744/853] Compiling hash_to_curve.c
+#16 109.3 [745/853] Compiling dsa_asn1.c
+#16 109.4 [746/853] Compiling ec_asn1.c
+#16 109.5 [747/853] Compiling params.c
+#16 109.5 [748/853] Compiling digest_extra.c
+#16 109.7 [749/853] Compiling dsa.c
+#16 109.7 [750/853] Compiling dh_asn1.c
+#16 109.8 [751/853] Compiling check.c
+#16 109.8 [752/853] Compiling dh.c
+#16 109.9 [753/853] Compiling x25519-asm-arm.S
+#16 110.0 [754/853] Compiling spake25519.c
+#16 110.0 [755/853] Compiling cpu-ppc64le.c
+#16 110.0 [756/853] Compiling crypto.c
+#16 110.1 [757/853] Compiling cpu-arm.c
+#16 110.2 [758/853] Compiling cpu-arm-linux.c
+#16 110.2 [759/853] Compiling cpu-intel.c
+#16 110.3 [760/853] Compiling cpu-aarch64-linux.c
+#16 110.3 [761/853] Compiling cpu-aarch64-fuchsia.c
+#16 110.5 [762/853] Compiling cmac.c
+#16 110.8 [763/853] Compiling conf.c
+#16 110.9 [764/853] Compiling tls_cbc.c
+#16 111.0 [765/853] Compiling e_rc4.c
+#16 111.1 [766/853] Compiling e_tls.c
+#16 111.3 [767/853] Compiling e_null.c
+#16 111.3 [768/853] Compiling e_rc2.c
+#16 111.5 [769/853] Compiling e_chacha20poly1305.c
+#16 111.7 [770/853] Compiling e_aesctrhmac.c
+#16 111.7 [771/853] Compiling e_aesgcmsiv.c
+#16 111.9 [772/853] Compiling derive_key.c
+#16 112.0 [773/853] Compiling cipher_extra.c
+#16 112.1 [774/853] Compiling chacha20_poly1305_x86_64.mac.x86_64.S
+#16 112.1 [775/853] Compiling e_aesccm.c
+#16 112.2 [776/853] Compiling curve25519.c
+#16 112.2 [777/853] Compiling aes128gcmsiv-x86_64.mac.x86_64.S
+#16 112.2 [778/853] Compiling aes128gcmsiv-x86_64.linux.x86_64.S
+#16 112.3 [779/853] Compiling chacha20_poly1305_x86_64.linux.x86_64.S
+#16 112.3 [780/853] Compiling chacha-x86_64.mac.x86_64.S
+#16 112.3 [781/853] Compiling chacha.c
+#16 112.3 [782/853] Compiling chacha-x86_64.linux.x86_64.S
+#16 112.3 [783/853] Compiling chacha-x86.linux.x86.S
+#16 112.4 [784/853] Compiling chacha-armv8.linux.aarch64.S
+#16 112.4 [785/853] Compiling chacha-armv8.ios.aarch64.S
+#16 112.4 [786/853] Compiling chacha-armv4.linux.arm.S
+#16 112.4 [787/853] Compiling chacha-armv4.ios.arm.S
+#16 112.5 [788/853] Compiling unicode.c
+#16 112.7 [789/853] Compiling ber.c
+#16 112.9 [790/853] Compiling asn1_compat.c
+#16 112.9 [791/853] Compiling cbs.c
+#16 113.0 [792/853] Compiling buf.c
+#16 113.1 [793/853] Compiling cbb.c
+#16 113.2 [794/853] Compiling bn_asn1.c
+#16 113.2 [795/853] Compiling socket_helper.c
+#16 113.3 [796/853] Compiling convert.c
+#16 113.4 [797/853] Compiling socket.c
+#16 113.4 [798/853] Compiling printf.c
+#16 113.6 [799/853] Compiling hexdump.c
+#16 113.7 [800/853] Compiling pair.c
+#16 113.7 [801/853] Compiling file.c
+#16 113.9 [802/853] Compiling fd.c
+#16 114.0 [803/853] Compiling bio_mem.c
+#16 114.0 [804/853] Compiling connect.c
+#16 114.2 [805/853] Compiling time_support.c
+#16 114.3 [806/853] Compiling base64.c
+#16 114.4 [807/853] Compiling bio.c
+#16 114.4 [808/853] Compiling tasn_utl.c
+#16 114.7 [809/853] Compiling tasn_typ.c
+#16 114.7 [810/853] Compiling tasn_fre.c
+#16 114.7 [811/853] Compiling tasn_new.c
+#16 114.9 [812/853] Compiling f_string.c
+#16 115.0 [813/853] Compiling f_int.c
+#16 115.0 [814/853] Compiling tasn_enc.c
+#16 115.2 [815/853] Compiling f_enum.c
+#16 115.2 [816/853] Compiling asn_pack.c
+#16 115.2 [817/853] Compiling tasn_dec.c
+#16 115.3 [818/853] Compiling asn1_par.c
+#16 115.4 [819/853] Compiling a_utf8.c
+#16 115.5 [820/853] Compiling asn1_lib.c
+#16 115.5 [821/853] Compiling a_utctm.c
+#16 115.6 [822/853] Compiling a_type.c
+#16 115.7 [823/853] Compiling a_time.c
+#16 115.7 [824/853] Compiling a_print.c
+#16 115.8 [825/853] Compiling a_strnid.c
+#16 115.9 [826/853] Compiling a_octet.c
+#16 116.0 [827/853] Compiling a_object.c
+#16 116.0 [828/853] Compiling a_mbstr.c
+#16 116.1 [829/853] Compiling a_i2d_fp.c
+#16 116.2 [830/853] Compiling a_int.c
+#16 116.3 [831/853] Compiling a_gentm.c
+#16 116.3 [832/853] Compiling a_enum.c
+#16 116.3 [833/853] Compiling a_dup.c
+#16 116.4 [834/853] Compiling a_d2i_fp.c
+#16 116.5 [835/853] Compiling a_bool.c
+#16 116.5 [836/853] Compiling a_bitstr.c
+#16 116.7 [837/853] Compiling CBcrypt bcrypt.c
+#16 116.7 [838/853] Compiling CBase32 cbase32.c
+#16 116.8 [839/854] Compiling CBacktrace state.c
+#16 116.8 [840/854] Compiling CBcrypt blf.c
+#16 116.8 [841/854] Compiling CBacktrace simple.c
+#16 116.9 [842/854] Compiling CBacktrace sort.c
+#16 116.9 [843/854] Compiling CBacktrace print.c
+#16 117.0 [844/854] Compiling CBacktrace posix.c
+#16 117.0 [845/854] Compiling CBacktrace mmapio.c
+#16 117.2 [846/854] Compiling CBacktrace fileline.c
+#16 117.2 [847/854] Compiling CBacktrace mmap.c
+#16 118.5 [848/854] Compiling CBacktrace elf.c
+#16 118.6 [849/854] Compiling CBacktrace backtrace.c
+#16 118.7 [850/854] Compiling CBacktrace atomic.c
+#16 120.0 [851/854] Compiling CBacktrace dwarf.c
+#16 123.0 [852/855] Compiling Backtrace Backtrace.swift
+#16 165.4 [853/855] Compiling Crypto AES-GCM.swift
+#16 190.9 [854/855] Compiling NIO AddressedEnvelope.swift
+#16 193.9 [855/859] Compiling NIOFoundationCompat ByteBuffer-foundation.swift
+#16 197.4 [856/860] Compiling NIOTLS ApplicationProtocolNegotiationHandler.swift
+#16 199.2 [857/861] Compiling NIOTransportServices NIOFilterEmptyWritesHandler.swift
+#16 203.2 [858/862] Compiling AsyncKit ConnectionPoolError.swift
+#16 210.2 [859/862] Compiling NIOExtras DebugInboundEventsHandler.swift
+#16 216.0 [860/862] Compiling NIOHTTP1 ByteCollectionUtils.swift
+#16 225.6 [861/865] Compiling NIOSSL ByteBufferBIO.swift
+#16 228.2 [862/865] Compiling NIOHTTPCompression HTTPCompression.swift
+#16 231.0 [863/866] Compiling NIOWebSocket Base64.swift
+#16 238.2 [864/867] Compiling NIOHPACK DynamicHeaderTable.swift
+#16 241.6 [865/868] Compiling WebSocketKit Exports.swift
+#16 264.7 [866/868] Compiling AsyncHTTPClient Connection.swift
+#16 307.5 [867/868] Compiling NIOHTTP2 ConnectionStateMachine.swift
+#16 440.2 [868/869] Compiling Vapor Application.swift
+#16 442.6 [869/870] Compiling App configure.swift
+#16 442.8 [870/871] Compiling Run main.swift
+#16 445.5 [871/871] Linking Run
+#16 DONE 445.6s
+
+#17 [build 8/9] WORKDIR /staging
+#17 DONE 0.0s
+
+#18 [build 9/9] RUN cp "$(swift build --package-path /build -c release --sho...
+#18 DONE 0.5s
+
+#7 [stage-1 3/5] RUN useradd --user-group --create-home --system --skel /de...
+#7 CACHED
+
+#6 [stage-1 2/5] RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTER...
+#6 CACHED
+
+#8 [stage-1 4/5] WORKDIR /app
+#8 CACHED
+
+#19 [stage-1 5/5] COPY --from=build --chown=vapor:vapor /staging /app
+#19 DONE 0.2s
+
+#20 exporting to image
+#20 exporting layers
+#20 exporting layers 0.3s done
+#20 writing image sha256:7853120ec00f88d79385a4ab08e18ce28cb671b208934a961211b58bea58bd2f
+#20 writing image sha256:7853120ec00f88d79385a4ab08e18ce28cb671b208934a961211b58bea58bd2f done
+#20 naming to docker.io/bramex/wsudoku done
+#20 DONE 0.3s
